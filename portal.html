@@ -27,8 +27,88 @@
 
 <h1>🚀 V.S.E PORTAL</h1>
 
-<h2>🛰️ SELAMAT DATANG DI SISTEM V.S.E</h2>
-<p>Akses berhasil... Anda telah memasuki pusat sistem</p>
+<div class="box">
+<h2>📋 Registrasi Anggota</h2>
+
+<input type="text" id="nama" placeholder="Nama"><br><br>
+<input type="number" id="umur" placeholder="Umur"><br><br>
+<textarea id="alasan" placeholder="Alasan ingin masuk"></textarea><br><br>
+
+<button onclick="buatKartu()">Submit</button>
+</div>
+
+<div id="kartu"></div>
+
+<style>
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+padding-top:50px;
+}
+
+.box{
+width:320px;
+margin:auto;
+padding:20px;
+border:2px solid #a855f7;
+box-shadow:0 0 20px #a855f7;
+border-radius:15px;
+background:#111;
+}
+
+input, textarea{
+width:90%;
+padding:10px;
+border:none;
+border-radius:8px;
+}
+
+button{
+padding:10px 20px;
+background:#a855f7;
+color:white;
+border:none;
+border-radius:10px;
+}
+
+#kartu{
+margin-top:30px;
+}
+.card{
+width:320px;
+margin:auto;
+padding:20px;
+border:2px solid cyan;
+box-shadow:0 0 20px cyan;
+border-radius:15px;
+background:#111;
+}
+</style>
+
+<script>
+function buatKartu(){
+let nama=document.getElementById("nama").value;
+let umur=document.getElementById("umur").value;
+let alasan=document.getElementById("alasan").value;
+
+document.getElementById("kartu").innerHTML=
+`<div class="card">
+<h2>🪪 KARTU IDENTITAS V.S.E</h2>
+<p>Nama: ${nama}</p>
+<p>Umur: ${umur}</p>
+<p>Status: Member</p>
+<p>Alasan: ${alasan}</p>
+</div>`;
+}
+</script>
 
 </body>
+
+
+
+
+
+
 </html>
