@@ -33,8 +33,7 @@
 <input type="text" id="nama" placeholder="Nama"><br><br>
 <input type="number" id="umur" placeholder="Umur"><br><br>
 <textarea id="alasan" placeholder="Alasan ingin masuk"></textarea><br><br>
-
-<a href="wa.html"><button onclick="buatKartu()">Submit</button></a>
+<button onclick="kirimData()">Submit</button>
 </div>
 
 <div id="kartu"></div>
@@ -88,8 +87,17 @@ background:#111;
 </style>
 
 <script>
-function buatKartu(){
-let nama=document.getElementById("nama").value;
+function kirimData(){
+let nama = document.getElementById("nama").value;
+let umur = document.getElementById("umur").value;
+let alasan = document.getElementById("alasan").value;
+
+localStorage.setItem("nama", nama);
+localStorage.setItem("umur", umur);
+localStorage.setItem("alasan", alasan);
+
+window.location.href = "wa.html";
+} let nama=document.getElementById("nama").value;
 let umur=document.getElementById("umur").value;
 let alasan=document.getElementById("alasan").value;
 
