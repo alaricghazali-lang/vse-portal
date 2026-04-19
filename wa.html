@@ -42,7 +42,7 @@ box-shadow:0 0 20px #25D366;
 </head>
 
 <body>
-
+<div id="kartu"></div>
 <div class="box">
 <h1>🚀 SALURAN V.S.E</h1>
 <p>Selamat datang anggota baru.</p>
@@ -57,6 +57,19 @@ box-shadow:0 0 20px #25D366;
 👥 Masuk Grup V.S.E
 </a>
 </div>
+<script>
+let nama = localStorage.getItem("nama");
+let umur = localStorage.getItem("umur");
+let alasan = localStorage.getItem("alasan");
 
+document.getElementById("kartu").innerHTML =
+`<div class="box">
+<h1>🪪 KARTU IDENTITAS V.S.E</h1>
+<p>Nama: ${nama}</p>
+<p>Umur: ${umur}</p>
+<p>Alasan: ${alasan}</p>
+<p>Status: Member Resmi</p>
+</div>`;
+</script>
 </body>
 </html>
