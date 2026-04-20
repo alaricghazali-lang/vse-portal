@@ -88,9 +88,14 @@ background:#111;
 
 <script>
 function kirimData() {
-let nama = document.getElementById("nama").value;
-let umur = document.getElementById("umur").value;
-let alasan = document.getElementById("alasan").value;
+let nama = document.getElementById("nama").value.trim();
+let umur = document.getElementById("umur").value.trim();
+let alasan = document.getElementById("alasan").value.trim();
+
+if(nama === "" || umur === "" || alasan === ""){
+alert("⚠️ Isi semua data dulu bro!");
+return;
+}
 
 localStorage.setItem("nama", nama);
 localStorage.setItem("umur", umur);
@@ -101,7 +106,20 @@ document.getElementById("loadingLogo").style.display = "block";
 setTimeout(function(){
 window.location.href = "wa.html";
 },1500);
-}
+   }
+
+
+
+
+
+
+
+
+
+
+
+  
+
 
 
 
