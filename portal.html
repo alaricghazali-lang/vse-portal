@@ -92,8 +92,18 @@ let nama = document.getElementById("nama").value.trim();
 let umur = document.getElementById("umur").value.trim();
 let alasan = document.getElementById("alasan").value.trim();
 
-if(nama === "" || umur === "" || alasan === ""){
-alert("⚠️ Isi semua data dulu bro!");
+if(nama.length < 3 || nama.length > 30){
+alert("⚠️ Nama harus 3 sampai 30 huruf!");
+return;
+}
+
+if(umur < 3 || umur > 50){
+alert("⚠️ Umur harus 3 sampai 50 tahun!");
+return;
+}
+
+if(alasan.length < 5 || alasan.length > 50){
+alert("⚠️ Alasan harus 5 sampai 50 huruf!");
 return;
 }
 
@@ -106,7 +116,24 @@ document.getElementById("loadingLogo").style.display = "block";
 setTimeout(function(){
 window.location.href = "wa.html";
 },1500);
-   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 
 
 
