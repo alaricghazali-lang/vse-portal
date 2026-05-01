@@ -178,7 +178,7 @@ height:100px;
 background:linear-gradient(white, transparent);
 opacity:0.8;
 transform:rotate(45deg);
-animation:jatuhMeteor linear infinite;
+animation:jatuhMeteor 2s linear infinite;
 }
 
 @keyframes jatuhMeteor{
@@ -194,12 +194,16 @@ opacity:0;
   </style>
 </head>
 <body>
-<div class="meteors">
+<div class="meteors">  
   <span style="left:10%; animation-delay:0s;"></span>
-  <span style="left:30%; animation-delay:1s;"></span>
-  <span style="left:50%; animation-delay:2s;"></span>
-  <span style="left:70%; animation-delay:3s;"></span>
-  <span style="left:90%; animation-delay:4s;"></span>
+<span style="left:30%; animation-delay:0.5s;"></span>
+<span style="left:50%; animation-delay:1s;"></span>
+<span style="left:70%; animation-delay:1.5s;"></span>
+<span style="left:90%; animation-delay:2s;"></span>
+  
+
+    
+    
 </div>
   <div id="startupScreen">
   <img src="logo.png" id="startupLogo">
